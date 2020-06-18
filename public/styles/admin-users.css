@@ -1,0 +1,50 @@
+.users {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.users .user p {
+    font-size: 18px;
+}
+
+.users .user span {
+    font-size: 14px;
+    color: #777777;
+}
+
+.users .user .actions {
+    display: flex;
+    align-items: baseline;
+    margin-top: 15px;
+}
+
+.users .user .actions a {
+    margin-right: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #6558C3;
+}
+
+.users .user .actions button {
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: #F55A5A;
+    cursor: pointer;
+}
+
+.user-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.user-form input[type="checkbox"] {
+    width: initial;
+}
+
+.user-form label[for="is_admin"] {
+    display: inline;
+    margin-left: 5px;
+}

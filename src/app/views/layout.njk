@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+    <head>
+        {% block head %}
+            <title>Foodfy</title>
+        {% endblock head %}
+        {% include "parts/styles.njk" %}
+    </head>
+    <body>
+        {% include "parts/messages.njk" %}
+        {% include "parts/header.njk" %}
+        <div class="app">
+            {% block content %}
+            {% endblock content %}
+        </div>
+        {% include "parts/footer.njk" %}
+        <script src="/scripts.js"></script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{% extends "layout.njk" %}
+{% block head %}
+    <title>Foodfy - Receitas</title>
+{% endblock head %}
+{% block content %}
+    {% if recipes.length > 0 %}
+        <div class="recipes">
+            {% for recipe in recipes %}
+                <div class="recipe">
+                    <img src="{{recipe.image.path}}" alt="Imagem de {{recipe.title}}">
+                    <a href="/recipes/{{recipe.id}}">{{recipe.title}}</a>
+                    <p>por {{recipe.chef.name}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="no-items">Ainda não há receitas cadastradas.</p>
+    {% endif %}
+{% endblock content %}

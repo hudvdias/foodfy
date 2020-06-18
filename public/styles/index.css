@@ -1,0 +1,27 @@
+.presentation {
+    width: 940px;
+    height: 370px;
+    background: #FBDFDB;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 50px;
+}
+
+.presentation div {
+    margin: auto;
+    max-width: 320px;
+}
+
+.presentation div p {
+    margin-top: 10px;
+    color: #000000;
+    opacity: 0.7;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.presentation img {
+    margin: 0 auto;
+    margin-top: auto;
+}

@@ -1,0 +1,15 @@
+.about-page {
+    margin-bottom: 50px;
+}
+
+.about-page p {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+
+.about-page h3 {
+    margin-top: 30px;
+    font-size: 20px;
+}

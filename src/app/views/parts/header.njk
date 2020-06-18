@@ -1,0 +1,21 @@
+<header>
+    <div class="container">
+        <a href="/">
+            <img src="/images/logo.png" alt="Foodfy">
+        </a>
+        <div class="navigation">
+            <a href="/about">Sobre</a>
+            <a href="/recipes">Receitas</a>
+            <a href="/chefs">Chefs</a>
+            {% if session.userId %}
+                <a href="/login" class="login">Minha Conta</a>
+            {% else %}
+                <a href="/login" class="login">Entrar</a>
+            {% endif %}
+        </div>
+        <form action="/search" method="get">
+            <input type="text" name="search" placeholder="Buscar uma receita">
+            <button tupe="submit" class="button">Buscar</button>
+        </form>
+    </div>
+</header>

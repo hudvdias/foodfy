@@ -1,0 +1,17 @@
+{% extends "admin/layout.njk" %}
+{% block content %}
+    <form action="/admin/chefs?_method=PUT" method="post" enctype="multipart/form-data">
+        <div class="admin-title">
+            <h1>Editando Chef</h1>
+            <div class="buttons">
+                <input type="hidden" name="id" value="{{chef.id}}">
+                <button type="submit" class="button">Salvar</button>
+            </div>
+        </div>
+        {% include "admin/chefs/form.njk" %}
+    </form>
+    <form action="/admin/chefs?_method=DELETE" method="post">
+        <input type="hidden" name="id" value="{{chef.id}}">
+        <button type="submit" class="button delete" onclick="ConfirmDelete.chef(event)">Deletar</button>
+    </form>
+{% endblock content %}

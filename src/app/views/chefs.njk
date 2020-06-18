@@ -1,0 +1,25 @@
+{% extends "layout.njk" %}
+{% block head %}
+    <title>Foodfy - Chefs</title>
+{% endblock head %}
+{% block content %}
+    {% if chefs.length > 0 %}
+        <div class="chefs">
+            {% for chef in chefs %}
+                <div class="chef">
+                    <img src="{{chef.image.path}}" alt="imagem de {{chef.name}}">
+                    <div class="info">
+                        <p>{{chef.name}}</p>
+                        {% if chef.recipes.length == 1 %}
+                            <span>{{chef.recipes.length}} Receita</span>
+                        {% else %}
+                            <span>{{chef.recipes.length}} Receitas</span>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="no-items">Ainda não há Chefs cadastrados.</p>
+    {% endif %}
+{% endblock content %}

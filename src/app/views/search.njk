@@ -1,0 +1,20 @@
+{% extends "layout.njk" %}
+{% block head %}
+    <title>Foodfy - Busca</title>
+{% endblock head %}
+{% block content %}
+    <h2>Buscando por "{{search}}"</h2>
+    <div class="recipes">
+        {% if recipes.length > 0 %}
+            {% for recipe in recipes %}
+                <div class="recipe">
+                    <img src="{{recipe.image.path}}" alt="Imagem de {{recipe.title}}">
+                    <a href="/recipes/{{recipe.id}}">{{recipe.title}}</a>
+                    <p>por {{recipe.chef.name}}</p>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>Nenhuma receita encontrada.</p>
+        {% endif %}
+    </div>
+{% endblock content %}

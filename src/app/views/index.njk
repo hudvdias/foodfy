@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+{% block content %}
+    <div class="presentation">
+        <div>
+            <h1>As melhores receitas</h1>
+            <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+        </div>
+        <img src="images/chef.png" alt="Chef do Foodfy">
+    </div>
+    <h2>Mais recentes</h2>
+    {% if recipes.length > 0 %}
+        <div class="recipes">
+            {% for recipe in recipes %}
+                <div class="recipe">
+                    <img src="{{recipe.image.path}}" alt="Imagem de {{recipe.title}}">
+                    <a href="/recipes/{{recipe.id}}">{{recipe.title}}</a>
+                    <p>por {{recipe.chef.name}}</p>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="no-items">Ainda não há receitas cadastradas.</p>
+    {% endif %}
+{% endblock content %}

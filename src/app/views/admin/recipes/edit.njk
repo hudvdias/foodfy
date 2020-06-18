@@ -1,0 +1,17 @@
+{% extends "admin/layout.njk" %}
+{% block content %}
+    <form action="/admin/recipes?_method=PUT" method="post" enctype="multipart/form-data">
+        <div class="admin-title">
+            <h1>Editando Receita</h1>
+            <div class="buttons">
+                <input type="hidden" name="id" value="{{recipe.id}}">
+                <button type="submit" class="button" onclick="ValidateForm.recipe(event)">Salvar</button>
+            </div>
+        </div>
+        {% include "admin/recipes/form.njk" %}
+    </form>
+    <form action="/admin/recipes?_method=DELETE" method="post">
+        <input type="hidden" name="id" value="{{recipe.id}}">
+        <button type="submit" class="button delete" onclick="ConfirmDelete.recipe(event)">Deletar</button>
+    </form>
+{% endblock content %}

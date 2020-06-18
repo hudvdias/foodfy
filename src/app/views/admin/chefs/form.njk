@@ -1,0 +1,14 @@
+<div class="chef-form">
+    <div class="item">
+        <label for="title">Nome</label>
+        <input type="text" name="name" value="{{chef.name}}" required>
+    </div>
+    <div class="item">
+        <label for="image">Imagem</label>
+        <input type="url" name="filename" value="{{chef.image.name}}" disabled >
+        <div class="image-uploader">
+            <p class="button">Enviar Avatar</p>
+            <input type="file" name="image" accept="image/*" onchange="ImageUpload.chef(event)" {% if not chef.file_id %} required {% endif %}>
+        </div>
+    </div>
+</div>

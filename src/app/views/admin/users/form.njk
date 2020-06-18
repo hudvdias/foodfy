@@ -1,0 +1,14 @@
+<div class="user-form">
+    <div class="item">
+        <label for="title">Nome</label>
+        <input type="text" name="name" value="{{user.name}}" required>
+    </div>
+    <div class="item">
+        <label for="email">Email</label>
+        <input type="email" name="email" value="{{user.email}}" required>
+    </div>
+    <div class="item">
+        <input type="checkbox" name="is_admin" {% if user.is_admin == true %} checked {% endif %}>
+        <label for="is_admin">Administrador</label>
+    </div>
+</div>

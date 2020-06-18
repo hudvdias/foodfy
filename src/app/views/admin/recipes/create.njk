@@ -1,0 +1,12 @@
+{% extends "admin/layout.njk" %}
+{% block content %}
+    <form action="/admin/recipes" method="post" enctype="multipart/form-data">
+        <div class="admin-title">
+            <h1>Criar Receita</h1>
+            <div class="buttons">
+                <button class="button" onclick="ValidateForm.recipe(event)">Salvar</button>
+            </div>
+        </div>
+        {% include "admin/recipes/form.njk" %}
+    </form>
+{% endblock content %}

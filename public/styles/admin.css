@@ -1,0 +1,18 @@
+.admin-title {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.admin-title h1 {
+    font-size: 24px;
+}
+
+.admin-title .buttons {
+    text-align: right;
+}
+
+.admin-title .buttons .button {
+    margin-left: 10px;
+}

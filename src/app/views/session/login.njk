@@ -1,0 +1,14 @@
+{% extends "session/layout.njk" %}
+{% block content %}
+    <h1>Iniciar Sessão</h1>
+    <form action="/login" method="POST">
+        <label for="email">Email</label>
+        <input type="email" name="email" value="{{email}}" required>
+        <label for="password">Senha</label>
+        <input type="password" name="password" required>
+        <div class="buttons">
+            <a href="/forgot-password">Perdeu a senha?</a>
+            <button class="button">Acessar</button>
+        </div>
+    </form>
+{% endblock content %}

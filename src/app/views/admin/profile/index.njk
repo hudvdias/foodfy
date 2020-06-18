@@ -1,0 +1,26 @@
+{% extends "admin/layout.njk" %}
+{% block content %}
+    <form action="/admin/profile?_method=PUT" method="post">
+        <div class="admin-title">
+            <h1>Bem vindo, {{user.name}}!</h1>
+            <div class="buttons">
+                <input type="hidden" name="id" value="{{user.id}}">
+                <button type="submit" class="button">Salvar</button>
+            </div>
+        </div>
+        <div class="user-form">
+            <div class="item">
+                <label for="title">Nome</label>
+                <input type="text" name="name" value="{{user.name}}" required>
+            </div>
+            <div class="item">
+                <label for="email">Email</label>
+                <input type="email" name="email" value="{{user.email}}" required>
+            </div>
+            <div class="item">
+                <label for="password">Senha</label>
+                <input type="password" name="password" required>
+            </div>
+        </div>
+    </form>
+{% endblock content %}

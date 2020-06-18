@@ -1,0 +1,26 @@
+{% extends "admin/layout.njk" %}
+{% block content %}
+    <div class="admin-title">
+        <h1>Gerenciar Chefs</h1>
+        <div class="buttons">
+            {% if session.isAdmin %}
+                <a href="/admin/chefs/create" class="button">Criar Chef</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="chefs">
+        {% if chefs.length > 0 %}
+            {% for chef in chefs %}
+                <div class="chef">
+                    <img src="{{chef.image.path}}" alt="imagem de {{chef.name}}">
+                    <div class="info">
+                        <p>{{chef.name}}</p>
+                        <a href="/admin/chefs/{{chef.id}}">Visualizar</a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% else %}
+            <p class="no-items">Ainda não há Chefs cadastrados.</p>
+        {% endif %}
+    </div>
+{% endblock content %}
