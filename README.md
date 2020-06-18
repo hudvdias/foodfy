@@ -35,9 +35,9 @@ Projeto do desafio final do bootcamp Launchstore, da Rocketseat.
 1. Abrir pasta do projeto no VSCode;
 1. Executar comando ```npm install``` no terminal;
 1. Executar as linhas do arquivo **database.sql** no Postbird;
-1. Executar o comando ```node seed.js``` no terminal;
 1. Configure o arquivo **db.js** na pasta "*src/config*" com suas informações do Postbird;
 1. Configurar o arquivo **mailer.js** na pasta "*src/config*" com suas informações do MailTrap;
+1. Executar o comando ```node seed.js``` no terminal;
 1. Executar o comando ```npm start``` no terminal.
 
 ## Observações
