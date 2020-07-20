@@ -1,6 +1,6 @@
 # Foodfy
 
-<img src="" alt="Chef do Foodfy"/> <img src="" alt="Foodfy" />
+<img src="https://github.com/hudvdias/foodfy/blob/master/public/images/chef.png" height=100 alt="Chef do Foodfy"/> <img src="https://github.com/hudvdias/foodfy/blob/master/public/images/logo.png" alt="Foodfy" />
 
 #### Projeto de avaliação do bootcamp Launchbase, da Rocketseat.
 
